@@ -1,18 +1,23 @@
 import React from 'react'
 import { View, Text, StyleSheet, TouchableOpacity, Image, ActivityIndicator } from 'react-native';
 import { StackScreenProps } from '@react-navigation/stack';
-import { RootStackParams } from '../navigator/TabsList';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { FadeInImage } from '../components/FadeInImage';
 import { usePokemon } from '../hooks/usePokemon';
 import { PokemonDetails } from '../components/PokemonDetails';
+import { SimplePokemon } from '../interfaces/pokemonInterface';
+
+export type RootStackParams = {
+  HomeScreen: undefined,
+  PokemonScreen: { simplePokemon : SimplePokemon, color: string}
+}
 
 interface Props extends StackScreenProps<RootStackParams, 'PokemonScreen'> {
 
 };
 
-export const PokemonScreen = ({navigation, route}: Props) => {
+export const PokemonScreen = ({navigation, route}: any) => {
   const { simplePokemon, color } = route.params;
   const { id, name, picture } = simplePokemon;
   const {top} = useSafeAreaInsets();

@@ -1,10 +1,10 @@
 
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Navigator } from './TabsList';
 import { Platform } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { TabsSearch } from './TabsSeach';
+import { HomeScreen } from '../screens/HomeScreen';
+import { SearchScreen } from '../screens/SearchScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -29,8 +29,8 @@ export const Tabs = () => {
             }}
         >
             <Tab.Screen 
-                name="Home" 
-                component={Navigator}
+                name="List" 
+                component={HomeScreen}
                 options={{
                     headerShown: false,
                     tabBarLabel: "List",
@@ -40,7 +40,7 @@ export const Tabs = () => {
             />
             <Tab.Screen
                 name="Search"
-                component={TabsSearch}
+                component={SearchScreen}
                 options={{
                     headerShown: false,
                     tabBarLabel: "Search",

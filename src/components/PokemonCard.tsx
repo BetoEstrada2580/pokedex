@@ -3,7 +3,6 @@ import { View, Text, TouchableOpacity, StyleSheet, Dimensions, Image,  } from 'r
 import { SimplePokemon } from '../interfaces/pokemonInterface';
 import { FadeInImage } from './FadeInImage';
 import { useNavigation } from '@react-navigation/native';
-import { getColors } from 'react-native-image-colors';
 
 const windowWidth = Dimensions.get('window').width;
 
