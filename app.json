@@ -2,14 +2,14 @@
   "expo": {
     "name": "pokedex",
     "slug": "pokedex",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/pokebola.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/pokebola-blanca.png",
       "resizeMode": "contain",
-      "backgroundColor": "#FF0000"
+      "backgroundColor": "#000000"
     },
     "assetBundlePatterns": [
       "**/*"
