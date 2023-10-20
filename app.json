@@ -9,7 +9,7 @@
     "splash": {
       "image": "./assets/pokebola-blanca.png",
       "resizeMode": "contain",
-      "backgroundColor": "red"
+      "backgroundColor": "#FF0000"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -20,7 +20,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/pokebola-blanca.png",
-        "backgroundColor": "red"
+        "backgroundColor": "#FF0000"
       },
       "package": "com.beto2580.pokedex",
       "versionCode": 1
