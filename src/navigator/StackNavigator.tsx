@@ -20,6 +20,7 @@ export const StackNavigator = () => {
                 component={PokemonScreen}
                 options={{
                     headerShown: false,
+                    presentation: 'modal',
                 }}
             />
         </Stack.Navigator>

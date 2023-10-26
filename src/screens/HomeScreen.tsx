@@ -1,4 +1,4 @@
-import { Text, View, Image, FlatList, ActivityIndicator } from 'react-native';
+import { StatusBar, View, Image, FlatList, ActivityIndicator } from 'react-native';
 import { appStyles } from '../theme/appTheme';
 import { usePokemonPaginated } from '../hooks/usePokemonPaginated';
 import { PokemonCard } from '../components/PokemonCard';
@@ -8,6 +8,7 @@ export const HomeScreen = () => {
 
     return (
         <>
+            <StatusBar barStyle="light-content" />
             <Image source={require('../assets/pokebola.png')} style={appStyles.pokebolaBG} />
             <View style={{ alignItems: 'center' }}>
                 <FlatList
