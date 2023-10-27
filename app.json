@@ -2,7 +2,7 @@
     "expo": {
         "name": "pokedex",
         "slug": "pokedex",
-        "version": "1.0.1",
+        "version": "1.0.3",
         "orientation": "portrait",
         "icon": "./assets/pokebola.png",
         "userInterfaceStyle": "light",
@@ -30,6 +30,12 @@
             "eas": {
                 "projectId": "c1e6df92-57ec-455d-9e6a-4bacbe7a027b"
             }
+        },
+        "runtimeVersion": {
+            "policy": "appVersion"
+        },
+        "updates": {
+            "url": "https://u.expo.dev/c1e6df92-57ec-455d-9e6a-4bacbe7a027b"
         }
     }
 }

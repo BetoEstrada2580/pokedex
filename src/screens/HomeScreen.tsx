@@ -1,14 +1,15 @@
-import { StatusBar, View, Image, FlatList, ActivityIndicator } from 'react-native';
+import { View, Image, FlatList, ActivityIndicator } from 'react-native';
 import { appStyles } from '../theme/appTheme';
 import { usePokemonPaginated } from '../hooks/usePokemonPaginated';
 import { PokemonCard } from '../components/PokemonCard';
+import { StatusBar } from 'expo-status-bar';
 
 export const HomeScreen = () => {
     const { simplePokemonList, loadPokemons, isLoading } = usePokemonPaginated();
 
     return (
         <>
-            <StatusBar barStyle="light-content" />
+            <StatusBar style="auto" />
             <Image source={require('../assets/pokebola.png')} style={appStyles.pokebolaBG} />
             <View style={{ alignItems: 'center' }}>
                 <FlatList

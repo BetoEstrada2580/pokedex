@@ -1,14 +1,14 @@
 import React from 'react';
 import { StyleSheet, View, Text, Image, FlatList, ActivityIndicator } from 'react-native';
-import { appStyles } from '../theme/appTheme';
-import { useMovePaginated } from '../hooks/useMovePaginated';
-import { MoveCard } from '../components/Moves/MoveCard';
+import { appStyles } from '../../theme/appTheme';
+import { useMovePaginated } from '../../hooks/useMovePaginated';
+import { MoveCard } from '../../components/Moves/MoveCard';
 
 export const MovementScreen = ({ navigation }: any) => {
     const { simpleMoveList, loadMoves, isLoading } = useMovePaginated();
     return (
         <View style={{ flex: 1, backgroundColor: 'white' }}>
-            <Image source={require('../assets/pokebola.png')} style={appStyles.pokebolaBG} />
+            <Image source={require('../../assets/pokebola.png')} style={appStyles.pokebolaBG} />
             <View style={{ alignItems: 'center' }}>
                 <FlatList
                     data={simpleMoveList}

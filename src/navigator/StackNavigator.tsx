@@ -1,6 +1,7 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Tabs } from './Tabs';
+import { SideBarMenu } from './SideBarMenu';
+import { SettingsScreen } from '../screens/SettingsScreen';
 import { PokemonScreen } from '../screens/PokemonScreen';
 
 const Stack = createNativeStackNavigator();
@@ -9,8 +10,8 @@ export const StackNavigator = () => {
     return (
         <Stack.Navigator>
             <Stack.Screen
-                name="Home"
-                component={Tabs}
+                name="SideBarMenu"
+                component={SideBarMenu}
                 options={{
                     headerShown: false,
                 }}
@@ -20,6 +21,14 @@ export const StackNavigator = () => {
                 component={PokemonScreen}
                 options={{
                     headerShown: false,
+                    presentation: 'modal',
+                }}
+            />
+            <Stack.Screen
+                name="SettingsScreen"
+                component={SettingsScreen}
+                options={{
+                    title: 'Settings',
                     presentation: 'modal',
                 }}
             />

@@ -1,10 +1,10 @@
 import { NavigationContainer } from '@react-navigation/native';
-import { SideBarMenu } from './src/navigator/SideBarMenu';
+import { StackNavigator } from './src/navigator/StackNavigator';
 
 export default function App() {
-  return (
-    <NavigationContainer>
-      <SideBarMenu />
-    </NavigationContainer>
-  );
-};
+    return (
+        <NavigationContainer>
+            <StackNavigator />
+        </NavigationContainer>
+    );
+}
