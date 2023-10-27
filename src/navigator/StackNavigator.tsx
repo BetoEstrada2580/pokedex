@@ -6,7 +6,7 @@ import { PokemonScreen } from '../screens/PokemonScreen';
 
 const Stack = createNativeStackNavigator();
 
-export const StackNavigator = () => {
+export const StackNavigator = ({ navigation }: any) => {
     return (
         <Stack.Navigator>
             <Stack.Screen

@@ -6,12 +6,23 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { appStyles } from '../theme/appTheme';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Tabs } from './Tabs';
+import { DrawerActions } from '@react-navigation/native';
 
 const Drawer = createDrawerNavigator();
 
-export const SideBarMenu = () => {
+export const SideBarMenu = ({ navigation }: any) => {
     return (
-        <Drawer.Navigator screenOptions={{ drawerStyle: { width: '50%' } }} drawerContent={(props) => <CustomSideBar {...props} />}>
+        <Drawer.Navigator
+            screenOptions={{
+                drawerStyle: { width: '50%' },
+                headerLeft: () => (
+                    <TouchableOpacity onPress={() => navigation.dispatch(DrawerActions.openDrawer())}>
+                        <Image source={require('../../assets/pokebola-blanca.png')} style={{ height: 30, width: 30 }} />
+                    </TouchableOpacity>
+                ),
+            }}
+            drawerContent={(props) => <CustomSideBar {...props} />}
+        >
             <Drawer.Screen name="StackNavigator" options={{ title: 'Pokedex' }} component={Tabs} />
             <Drawer.Screen name="MovementScreen" options={{ title: 'Moves Dex' }} component={MovementScreen} />
         </Drawer.Navigator>
